@@ -32,6 +32,7 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
+```
 math.html
 
 <html>
@@ -153,11 +154,12 @@ def power(request):
         context['R'] = R 
         print('Power=',power) 
     return render(request,'mathapp/math.html',context)
+```
 ## SERVER SIDE PROCESSING:
-![alt text](<gtmath/side preocessing.png>)
+![alt text](<gtmath/mathapp/templates/mathapp/ex 5 full.png>)
 
 ## HOMEPAGE:
-![alt text](<gtmath/powerr watts.png>)
+![alt text](<gtmath/mathapp/templates/mathapp/lamp full screenshot.png>)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
