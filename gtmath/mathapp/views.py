@@ -1,19 +1,16 @@
-from django.shortcuts import render 
-def power(request): 
-    context={} 
-    context['power'] = "0" 
-    context['I'] = "0" 
-    context['R'] = "0" 
-    if request.method == 'POST': 
-        print("POST method is used")
-        I =float( request.POST.get('intensity','0'))
-        R = float(request.POST.get('resistance','0'))
-        print('request=',request) 
-        print('intensity=',I) 
-        print('resistance=',R) 
-        power = (((I)**2) * (R))
-        context['power'] = power 
-        context['I'] = I
-        context['R'] = R 
-        print('Power=',power) 
-    return render(request,'mathapp/math.html',context)
+from django.shortcuts import render
+from django.http import JsonResponse
+
+def lamp_power_calculator(request):
+    """Renders the Lamp Power Calculator page."""
+    return render(request, 'lamp_power_calculator.html')
+
+def calculate_power(request):
+    """Handles the power calculation request."""
+    if request.method == 'GET':
+        intensity = float(request.GET.get('intensity', 0))
+        resistance = float(request.GET.get('resistance', 0))
+        power = intensity**2 * resistance
+        return JsonResponse({'power': round(power, 2)})
+    else:
+        return JsonResponse({'error': 'Invalid request method'}, status=400)
