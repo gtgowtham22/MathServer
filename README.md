@@ -208,10 +208,10 @@ def calculate_power(request):
 
 ```
 ## SERVER SIDE PROCESSING:
-![alt text](<gtmath/mathapp/templates/mathapp/ex 5 full.png>)
+![alt text](<VS CODE FOR FINAL EX 5.png>)
 
 ## HOMEPAGE:
-![alt text](<gtmath/mathapp/templates/mathapp/lamp full screenshot.png>)
+![alt text](<THIS IS OK.png>)
 
 ## RESULT:
 The program for performing server side processing is completed successfully.
